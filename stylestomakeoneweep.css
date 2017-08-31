@@ -1,0 +1,170 @@
+.canvas {
+	background-color:white;
+	/*position:relative;*/
+	/*left:40px;*/
+	border:2px solid black;
+/*	height:504px;*/
+	/*width:504px;*/
+}
+
+.colors {
+	/*position:relative;*/
+	/*left:40px;*/
+	height:50px;
+	top:-2px;
+	/*width:504px;*/
+	border:2px solid black;
+}
+
+.color {
+	width:12.5%;
+	float:left;
+	height:100%;
+}
+
+.color:hover {
+	opacity:0.8;
+}
+
+.pixel {
+/*	position:absolute;*/
+	/*border:1px dotted black;*/
+	width:10%;
+	/*padding-bottom:10%;*/
+	float:left;
+	height:50px;
+}
+
+.centeringDiv {
+}
+
+.pixel:hover {
+	border:1px solid black;
+}
+
+.redpix {
+	background-color:red;
+}
+
+.annoyingAdRow {
+	color:white;
+	background-color:red;
+	-webkit-animation: annoyingad 1s infinite;
+	animation: annoyingad 1s infinite;
+}
+@-webkit-keyframes annoyingad {
+	from {background-color:#4A412A;} /*"ugliest color ever"*/
+	to {background-color:#809E49;} /*"puke green"*/
+}
+@keyframes annoyingad {
+	from {background-color:#4A412A;}
+	to {background-color:#809E49;}
+}
+.adPart {
+	width:33%;
+	float:left;
+	background-color:transparent;
+	/*border:1px dashed black;*/
+	margin: 0 auto;
+	padding:0 2%;
+}
+
+.garbageAd {
+	color:white;
+	text-shadow:2px 2px black;
+	min-height:700px;
+	/*background-image:url("images/garbageAd1.gif");*/
+	background-repeat:no-repeat;
+	background-position: 20% 20%;
+	background-size:cover;
+}
+
+.garbageAd:hover {
+	color:#ccc;
+	text-shadow:4px 4px red;
+	cursor:pointer;
+}
+
+.intrusiveAd {
+	color:white;
+	text-shadow:2px 2px black;
+	min-height:700px;
+	background-image:url("images/clashofclans_art.jpg");
+	/*background-repeat:no-repeat;*/
+	background-attachment:fixed;
+	background-position: center;
+	-webkit-animation: intrusiveAd 5s linear infinite;
+	animation: intrusiveAd 5s linear infinite;
+}
+@-webkit-keyframes intrusiveAd {
+	from {background-position: 0% 0%;}
+	to {background-position:100% 100%;}
+}
+@keyframes intrusiveAd {
+	from {background-position: 0% 0%;}
+	to {background-position:100% 100%;}
+}
+
+.linksYouDontWant {
+	background-image: url("images/ribbon.png");
+	background-position: center;
+	background-size:cover;
+	background-color:black;
+}
+
+.unusedLink {
+	background-color:transparent;
+	color:white;
+	width:25%;
+	float:left;
+	height:100px;
+	/*padding: 0px 3px 0px 3px;*/
+	border:2px solid black;
+}
+
+.unusedLink:hover {
+	color:#CCC;
+	background-color:#222;
+	cursor:pointer;
+}
+
+.unusedLink:active {
+	color:#888;
+}
+
+.subscriptionConfirmed {
+	font-family: 'Lobster', cursive;
+	position: fixed;
+	top:10%;
+	left:10%;
+	width:80%;
+	height:80%;
+	font-size:200%;
+	padding-top:10%;
+	background-color:#888;
+	border:2px solid black;
+	border-radius:25px;
+}
+
+.coverup {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:#aaa;
+	opacity:0.6;
+}
+
+.closeButton {
+	border-radius:10px;
+}
+.closeButton:hover {
+	background-color:black;
+	color:white;
+}
+
+/*
+body {
+	background:black;
+}*/

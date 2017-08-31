@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pixels</title>
+		<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+		<link href="stylestomakeoneweep.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body ng-app="pixelFunApp" ng-controller="MainCtrl" style="background-color:{{selectedColor}}">
+		<div class="row annoyingAdRow text-center">
+			<div class="adPart">
+				<br>
+				<p>#1 Product as Rated by <em>Our Internal Marketing Staff</em>, the #1 rated rating group in our company!</p>
+			</div>
+			<div class="adPart">
+				<h1>ANNOYING AD!</h1>
+				<p>PAY ATTENTION TO ME!!</p>
+				<!-- <p>Testing: {{testing}}</p> -->
+			</div>
+			<div class="adPart">
+				<br>
+				<p>Wow! Only $49.99!</p>
+				<p>Act fast! This offer expires in just 2ms!</p>
+			</div>
+		</div> <!-- End annoying ad row -->
+
+		<div class="row">
+<!-- Garbage ad -->
+			<div ng-click = "changeGarbage()" class="garbageAd col-lg-3" style="background-image:{{garbageImg}}">
+				<h1>Are you an idiot? Then you'll love this product!</h1>
+				<br>
+				<h3>Give us your money, and you can own this garbage!</h3>
+			</div>
+<!-- Content -->
+			<div class="centeringDiv col-lg-6">
+				<div class="row text-center">
+					<div class="col-md-12">
+						<p><strong>Content that wasn't worth clicking to!</strong></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1">
+						<p>Directions: Click a color from the color boxes, then click a box on the canvas.</p>
+					</div>
+				</div>
+				<div class="row canvas text-center">
+					<div ng-click="changeColor(pixel.value)" ng-repeat="pixel in pixels" class="pixel" style="left:{{pixel.x}}px;top:{{pixel.y}}px;background-color:{{pixel.color}};">
+						<p></p>
+					</div>
+				</div> <!-- End canvas -->
+				
+				<div class="row colors">
+					<div ng-click="pickColor(color)" class="color" ng-repeat="color in colors" style="background-color:{{color}};">
+					</div>
+				</div> <!-- End colors -->
+
+			</div> <!-- End content -->
+
+			<a href="http://www.digital-eel.com/blog/game_name_gen.htm">
+				<div class="intrusiveAd col-lg-3">
+				<h3>Based on your </h3><h1>PERSONAL DATA </h1><h3>from </h3><h1>ACROSS THE INTERNET, </h1><h3>we know you'll </h3><h1>LOVE </h1><h3><span style="color:red;">WORLD LEAGUE CLASH </span> of <span style="color:blue;">TANK-BRIDGE-JUNGLE </span><span style="color:purple;">WAR BATTLE!!!!!!!!!!11!!!1!!!!!</span></h3>
+				</div>
+			</a>
+		</div> <!-- End 3-col layout row -->
+
+		<div class="row linksYouDontWant text-center">
+			<a href="http://vincentrupp.com/ngProjects/catRater/">
+				<div class="unusedLink" style="font-family: Vivaldi, fantasy;">
+					<p><h3>Similar content to be disappointed in.</h3></p>
+				</div>
+			</a>
+			<a href="http://www.usmagazine.com/celebrity-news/pictures/stars-who-were-born-rich-w437418">
+				<div class="unusedLink" style="font-family: Papyrus, fantasy;">
+					<h4><strong>Celebrities hate her! One mom's simple trick to starring in $100M films!</strong></h4>
+				</div>
+			</a>
+			<a href="https://www.google.com/search?tbm=isch&source=hp&biw=1762&bih=954&q=obama+tan+suit&oq=obama+tan+suit&gs_l=img.3..0l8j0i5i30k1l2.162.1693.0.1845.15.12.0.0.0.0.139.582.6j2.8.0....0...1.1.64.img..7.8.582.0..35i39k1.2l2jkBidEeM">
+				<div class="unusedLink" style="font-family: Kristen ITC, serif;">
+					<p><h4>137,000 images Obama doesn't want you to see. You won't believe #56,705!</h4></p>
+				</div>
+			</a>
+			<div ng-click="interrupt=1" class="unusedLink" style="font-family: Curlz MT, fantasy;">
+				<p><h3>Subscribe to our sixteen emails per day email list!</h3></p>
+			</div>
+		</div>
+
+		<div class="coverup" ng-show="interrupt==1">
+		</div>
+
+		<div class="subscriptionConfirmed" ng-show="interrupt==1">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<p>Thanks for subscribing to the newsletter! Your first issue should be arriving shortly.</p>
+					<p>Unsubscribe any time by finding the tiny link at the bottom of the email, loading a separate page to manage your email preferences, clicking three times in under 1 second on the 'Unsubscribe' link, and confirming your unsubscription via email.</p>
+					<p><sub>(Note: You may continue to receive emails for up to six months until the request is processed.)</sub></p>
+					<button class="closeButton" ng-click="interrupt=0">Close</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
